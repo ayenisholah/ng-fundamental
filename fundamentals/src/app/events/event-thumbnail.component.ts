@@ -13,6 +13,7 @@ import { Component, Input } from '@angular/core';
       <span>&nbsp;</span>
       <span>{{event.location.city}}, {{event.location.country}}</span>
     </div>
+    <button class="btn btn-primary">Click Me</button>
   </div>
   `,
   styleUrls: ['./event-thumbnail.component.css']
