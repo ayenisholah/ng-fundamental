@@ -11,12 +11,15 @@ import { Component, Input } from '@angular/core';
     <div>
       <span>Location: {{event.location.address}}</span>
       <span>&nbsp;</span>
-      <span>{{event.location.city}}, {{event.location.country}}</span>
+      <span class="pad-left">{{event.location.city}}, {{event.location.country}}</span>
     </div>
-    <button class="btn btn-primary">Click Me</button>
   </div>
   `,
-  styleUrls: ['./event-thumbnail.component.css']
+  styles: [`
+  .thumbnail { min-height: 210px }
+  .pad-left { margin-left: 10px }
+  .well div { color: #bbb }
+  `]
 })
 export class EventThumbnailComponent {
   @Input() event: any;
