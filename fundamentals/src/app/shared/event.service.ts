@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class EventService {
   getEvents() {
     // tslint:disable-next-line: no-use-before-declare
