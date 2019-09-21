@@ -13,6 +13,7 @@ import { EventDetailsComponent } from './events/event-details/event-details.comp
 import { appRoutes } from './routes';
 import { RouterModule } from '@angular/router';
 import { CreateEventComponent } from './shared/create-event.component';
+import { Error404Component } from './errors/error404.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { CreateEventComponent } from './shared/create-event.component';
     EventThumbnailComponent,
     NavComponent,
     EventDetailsComponent,
-    CreateEventComponent
+    CreateEventComponent,
+    Error404Component
   ],
   imports: [
     BrowserModule,
