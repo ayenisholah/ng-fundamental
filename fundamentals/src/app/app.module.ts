@@ -10,6 +10,8 @@ import { EventThumbnailComponent } from './events/event-thumbnail/event-thumbnai
 import { NavComponent } from './nav/nav.component';
 import { EventService } from './shared/event.service';
 import { EventDetailsComponent } from './events/event-details/event-details.component';
+import { appRoutes } from './routes';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -23,9 +25,8 @@ import { EventDetailsComponent } from './events/event-details/event-details.comp
     BrowserModule,
     CommonModule,
     BrowserAnimationsModule,
-    ToastrModule.forRoot({
-      positionClass: 'toast-top-right'
-    })
+    ToastrModule.forRoot(),
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [EventService],
   bootstrap: [EventsAppComponent]
