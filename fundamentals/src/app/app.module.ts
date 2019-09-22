@@ -8,11 +8,11 @@ import { EventsAppComponent } from './event-app.component';
 import { EventsListComponent } from './events/event-list/events-list.component';
 import { EventThumbnailComponent } from './events/event-thumbnail/event-thumbnail.component';
 import { NavComponent } from './nav/nav.component';
-import { EventService } from './shared/event.service';
+import { EventService } from './events/shared/event.service';
 import { EventDetailsComponent } from './events/event-details/event-details.component';
 import { appRoutes } from './routes';
 import { RouterModule } from '@angular/router';
-import { CreateEventComponent } from './shared/create-event.component';
+import { CreateEventComponent } from './events/create-event.component';
 import { Error404Component } from './errors/error404.component';
 import { EventRouteActivator } from './events/event-details/event-route-activator.service';
 

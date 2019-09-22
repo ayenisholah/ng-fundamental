@@ -1,12 +1,22 @@
 import { Injectable } from '@angular/core';
+// 1. Bring in Subject from 'rxjs'
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class EventService {
   getEvents() {
+    // 2. Create an instance of Subject
+    const subject = new Subject();
+    setTimeout(() => {
+      // tslint:disable-next-line: no-use-before-declare
+      subject.next(events);
+      subject.complete();
+    }, 2000);
+    return subject;
+
     // tslint:disable-next-line: no-use-before-declare
-    return events;
   }
 
   getEvent(id: number) {
