@@ -16,7 +16,6 @@ export class EventService {
     }, 2000);
     return subject;
 
-    // tslint:disable-next-line: no-use-before-declare
   }
 
   getEvent(id: number) {
