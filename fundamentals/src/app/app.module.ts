@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
-import { HttpClientModule } from '@angular/common/http';
 
 import { EventsAppComponent } from './event-app.component';
 import { EventsListComponent } from './events/event-list/events-list.component';
@@ -29,7 +28,6 @@ import { EventListResolver } from './events/event-list-resolver.service';
     Error404Component
   ],
   imports: [
-    HttpClientModule,
     BrowserModule,
     CommonModule,
     BrowserAnimationsModule,
