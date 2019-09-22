@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { HttpClientModule } from '@angular/common/http';
 
 import { EventsAppComponent } from './event-app.component';
 import { EventsListComponent } from './events/event-list/events-list.component';
@@ -15,6 +16,7 @@ import { RouterModule } from '@angular/router';
 import { CreateEventComponent } from './events/create-event.component';
 import { Error404Component } from './errors/error404.component';
 import { EventRouteActivator } from './events/event-details/event-route-activator.service';
+import { EventListResolver } from './events/event-list-resolver.service';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,7 @@ import { EventRouteActivator } from './events/event-details/event-route-activato
     Error404Component
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     CommonModule,
     BrowserAnimationsModule,
@@ -36,6 +39,7 @@ import { EventRouteActivator } from './events/event-details/event-route-activato
   providers: [
     EventService,
     EventRouteActivator,
+    EventListResolver,
     // guard deactivation provider
     {
       provide: 'canDeactivateCreateEvent',
